@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  h2 post
+  form#brokerPost(action='http://dev.internethic.com:8082/')
+    label user
+    input(type='text', name='user')
+    label message
+    input(type='text', name='message')
+    input(type='submit', name='go', value='send')
+
+  h2 get
+  form#brokerGet(action='http://dev.internethic.com:8082/')
+    label user
+    input(type='text', name='user')
+    label message
+    input(type='text', name='message')
+    input(type='submit', name='go', value='send')
